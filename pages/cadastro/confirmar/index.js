@@ -12,7 +12,7 @@ export default function ConfirmRegisterPage() {
       <Banner
         variant="warning"
         title="Falta só uma etapa!"
-        description="Abra o email enviado pelo Aero Prática Club e clique no link de confirmação."
+        description="Abra o email enviado pelo Aeroprática Club e clique no link de confirmação."
       />
     </DefaultLayout>
   );

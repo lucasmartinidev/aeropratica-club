@@ -1,5 +1,5 @@
 {
-  "name": "aero-pratica-club",
+  "name": "aeropratica-club",
   "version": "1.0.0",
   "description": "Implementação do https://www.aeropratica.club com a base do https://curso.dev",
   "main": "index.js",
@@ -29,15 +29,15 @@
     "async-retry": "1.3.3",
     "bcryptjs": "3.0.3",
     "cookie": "1.1.1",
-    "next": "16.2.0",
+    "next": "16.3.4",
     "next-connect": "1.0.0",
     "node-pg-migrate": "7.6.1",
-    "nodemailer": "8.0.3",
+    "nodemailer": "10.0.7",
     "pg": "8.20.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "swr": "2.4.1",
-    "uuid": "11.1.0"
+    "uuid": "11.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "20.5.0",
@@ -46,9 +46,9 @@
     "@eslint/js": "9.39.4",
     "@eslint/json": "1.1.0",
     "@eslint/markdown": "7.5.1",
-    "@faker-js/faker": "9.7.0",
-    "commitizen": "4.3.1",
-    "concurrently": "9.2.1",
+    "@faker-js/faker": "10.6.0",
+    "commitizen": "4.3.2",
+    "concurrently": "9.2.4",
     "cz-conventional-changelog": "3.3.0",
     "dotenv": "16.4.5",
     "dotenv-expand": "12.0.3",

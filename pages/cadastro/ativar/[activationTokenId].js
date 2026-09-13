@@ -7,7 +7,8 @@ export default function ActivateUserPage() {
   const router = useRouter();
   const { activationTokenId } = router.query;
 
-  const [isActivating, setIsActivating] = useState(false);
+  const [activationStatus, setIsActivationStatus] = useState("loading");
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     if (!activationTokenId) {
@@ -26,21 +27,27 @@ export default function ActivateUserPage() {
           },
         );
 
-        const activationResponseBody = await response.json();
         if (response.status === 200) {
-          // sinal de sucesso para o usuário, talvez um toast ou algo do tipo
-          console.log("Sucesso: ", activationResponseBody);
+          setIsActivationStatus("success");
           return;
         }
-        // sinal de falha para o usuário, talvez um toast ou algo do tipo
-        console.log("Falha: ", activationResponseBody);
+
+        const activationResponseBody = await response.json();
+        setErrorMessage(
+          `${activationResponseBody.message} ${activationResponseBody.action}`,
+        );
+        setIsActivationStatus("failure");
       } catch (error) {
-        // sinal de falha para o usuário, talvez um toast ou algo do tipo
         if (error.name === "TimeoutError") {
-          console.error("O servidor demorou para responder");
+          setErrorMessage(
+            "O servidor demorou para responder. Tente novamente mais tarde.",
+          );
         } else {
-          console.error("Erro ao fazer a requisição: ", error);
+          setErrorMessage(
+            "Ocorreu um erro ao tentar ativar a sua conta. Tente novamente mais tarde.",
+          );
         }
+        setIsActivationStatus("failure");
       }
     }
   }, [activationTokenId]);
@@ -52,17 +59,28 @@ export default function ActivateUserPage() {
         title: "Ative sua conta",
       }}
     >
-      <Banner
-        variant="critical"
-        title="Erro ao ativar a conta"
-        description="O servidor demorou para responder"
-      />
-      <Banner
-        variant="success"
-        title="Conta ativada com sucesso"
-        description="Tente fazer login com seu e-mail e senha."
-        primaryAction={<Banner.PrimaryAction href="/login">Login</Banner.PrimaryAction>}
-      />
+      {activationStatus === "loading" && (
+        <Banner variant="info">
+          <Banner.Title>
+            Por favor, aguarde enquanto ativamos sua conta.
+          </Banner.Title>
+        </Banner>
+      )}
+      {activationStatus === "success" && (
+        <Banner variant="success">
+          <Banner.Title>Conta ativada com sucesso</Banner.Title>
+          <Banner.Description>
+            Você já pode fazer o login com seu e-mail e senha.
+          </Banner.Description>
+          <Banner.PrimaryAction href="/login">Login</Banner.PrimaryAction>
+        </Banner>
+      )}
+      {activationStatus === "failure" && (
+        <Banner variant="critical">
+          <Banner.Title>Não foi possível ativar a sua conta</Banner.Title>
+          <Banner.Description>{errorMessage}</Banner.Description>
+        </Banner>
+      )}
     </DefaultLayout>
   );
 }

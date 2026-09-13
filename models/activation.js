@@ -108,15 +108,15 @@ async function activateUserByUserId(userId) {
 
 async function sendEmailToUser(user, activationToken) {
   await email.send({
-    from: "Aero Prática Club <contato@aeropratica.club>",
+    from: "Aeroprática Club <contato@aeropratica.club>",
     to: user.email,
-    subject: "Ative sua conta no Aero Prática Club!",
-    text: `${user.username}, clique no link abaixo para ativar sua conta no Aero Prática Club:
+    subject: "Ative sua conta no Aeroprática Club!",
+    text: `${user.username}, clique no link abaixo para ativar sua conta no Aeroprática Club:
 
 ${webserver.origin}/cadastro/ativar/${activationToken.id}
 
 Atenciosamente,
-Equipe Aero Prática Club`,
+Equipe Aeroprática Club`,
   });
 }
 

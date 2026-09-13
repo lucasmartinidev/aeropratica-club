@@ -10,14 +10,14 @@ describe("infra/email.js", () => {
     await orchestrator.deleteAllEmails();
 
     await email.send({
-      from: "Aero Prática Club <contato@aeropratica.club>",
+      from: "Aeroprática Club <contato@aeropratica.club>",
       to: "contato@aeropratica.club",
       subject: "Teste de assunto",
       text: "Teste de corpo.",
     });
 
     await email.send({
-      from: "Aero Prática Club <contato@aeropratica.club>",
+      from: "Aeroprática Club <contato@aeropratica.club>",
       to: "contato@aeropratica.club",
       subject: "Último email enviado",
       text: "Corpo do último email.",

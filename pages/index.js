@@ -5,11 +5,11 @@ function Home() {
     <DefaultLayout
       metadata={{
         description:
-          "Aero Prática Club | Sua próxima experiência de voo começa aqui.",
+          "Aeroprática Club | Sua próxima experiência de voo começa aqui.",
       }}
     >
       <h1>
-        Aero Prática Club ✈️ Sua próxima experiência de voo começa aqui! 🚁{" "}
+        Aeroprática Club ✈️ Sua próxima experiência de voo começa aqui! 🚁{" "}
       </h1>
     </DefaultLayout>
   );

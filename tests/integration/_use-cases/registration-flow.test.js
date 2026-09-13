@@ -48,7 +48,7 @@ describe("Use case: Registration Flow (all successful)", () => {
     expect(lastEmail.recipients[0]).toBe(
       "<registration.flow@aeropratica.club>",
     );
-    expect(lastEmail.subject).toBe("Ative sua conta no Aero Prática Club!");
+    expect(lastEmail.subject).toBe("Ative sua conta no Aeroprática Club!");
     expect(lastEmail.text).toContain("RegistrationFlow");
 
     activationTokenId = orchestrator.extractUUID(lastEmail.text);

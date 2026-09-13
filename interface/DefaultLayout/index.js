@@ -20,8 +20,8 @@ export default function DefaultLayout({
       <Head>
         <title>
           {metadata.title
-            ? `${metadata.title} · Aero Prática Club`
-            : "Aero Prática Club"}
+            ? `${metadata.title} · Aeroprática Club`
+            : "Aeroprática Club"}
         </title>
 
         {metadata.description && (
@@ -32,7 +32,7 @@ export default function DefaultLayout({
       <PageLayout.Header>
         <Header>
           <Header.Item full>
-            <Header.Link href="/">Aero Prática Club</Header.Link>
+            <Header.Link href="/">Aeroprática Club</Header.Link>
           </Header.Item>
           <Header.Item>
             <Header.Link href="/login">Login</Header.Link>
@@ -53,7 +53,7 @@ export default function DefaultLayout({
 
         <PageLayout.Footer divider="line">
           <Text size="small">
-            © {new Date().getFullYear()} Aero Prática Club | Sua próxima
+            © {new Date().getFullYear()} Aeroprática Club | Sua próxima
             experiência de voo começa aqui.
           </Text>
         </PageLayout.Footer>
