@@ -19,6 +19,7 @@ describe("POST /api/v1/users", () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          fullname: "Tom Cruzeiro",
           username: "maverick",
           email: "contato@aeropratica.club",
           password: "senha123",
@@ -63,6 +64,7 @@ describe("POST /api/v1/users", () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          fullname: "Email Duplicado 1",
           username: "emailduplicado1",
           email: "duplicado@aeropratica.club",
           password: "senha123",
@@ -77,6 +79,7 @@ describe("POST /api/v1/users", () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          fullname: "Email Duplicado 2",
           username: "emailduplicado2",
           email: "Duplicado@aeropratica.club",
           password: "senha123",
@@ -102,6 +105,7 @@ describe("POST /api/v1/users", () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          fullname: "Username Duplicado",
           username: "usernameduplicado",
           email: "usernameduplicado1@aeropratica.club",
           password: "senha123",
@@ -116,6 +120,7 @@ describe("POST /api/v1/users", () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          fullname: "Username Duplicado",
           username: "UsernameDuplicado",
           email: "usernameduplicado2@aeropratica.club",
           password: "senha123",
@@ -148,6 +153,7 @@ describe("POST /api/v1/users", () => {
           Cookie: `session_id=${user1SessionObject.token}`,
         },
         body: JSON.stringify({
+          fullname: "Usuário Logado",
           username: "usuariologado",
           email: "usuariologado@aeropratica.club",
           password: "senha123",

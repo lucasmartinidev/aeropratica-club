@@ -64,6 +64,7 @@ function filterOutput(user, feature, resource) {
     if (user.id === resource.id) {
       return {
         id: resource.id,
+        fullname: resource.fullname,
         username: resource.username,
         email: resource.email,
         features: resource.features,

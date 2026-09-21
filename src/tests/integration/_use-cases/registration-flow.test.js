@@ -22,6 +22,7 @@ describe("Use case: Registration Flow (all successful)", () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        fullname: "Registration Flow User",
         username: "RegistrationFlow",
         email: "registration.flow@aeropratica.club",
         password: "RegistrationFlowPassword",
@@ -49,7 +50,7 @@ describe("Use case: Registration Flow (all successful)", () => {
       "<registration.flow@aeropratica.club>",
     );
     expect(lastEmail.subject).toBe("Ative sua conta no Aeroprática Club!");
-    expect(lastEmail.text).toContain("RegistrationFlow");
+    expect(lastEmail.text).toContain("Registration Flow User");
 
     activationTokenId = orchestrator.extractUUID(lastEmail.text);
 
