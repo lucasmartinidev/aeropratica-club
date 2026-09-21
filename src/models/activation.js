@@ -111,9 +111,12 @@ async function sendEmailToUser(user, activationToken) {
     from: "Aeroprática Club <contato@aeropratica.club>",
     to: user.email,
     subject: "Ative sua conta no Aeroprática Club!",
-    text: `${user.username}, clique no link abaixo para ativar sua conta no Aeroprática Club:
+    text: `${user.fullname}, clique no link abaixo para ativar sua conta no Aeroprática Club:
 
 ${webserver.origin}/cadastro/ativar/${activationToken.id}
+
+Lembre-se: este link expira em 15 minutos.
+E o seu usuário para efetuar login 3é: ${user.username}
 
 Atenciosamente,
 Equipe Aeroprática Club`,

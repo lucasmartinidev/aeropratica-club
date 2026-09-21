@@ -108,13 +108,14 @@ async function create(userInputValues) {
     const results = await database.query({
       text: `
         INSERT INTO
-          users (username, email, password, features)
+          users (fullname, username, email, password, features)
         VALUES
-          ($1, $2, $3, $4)
+          ($1, $2, $3, $4, $5)
         RETURNING
           *
         ;`,
       values: [
+        userInputValues.fullname,
         userInputValues.username,
         userInputValues.email,
         userInputValues.password,
@@ -155,9 +156,10 @@ async function update(username, userInputValues) {
         UPDATE
           users
         SET
-          username = $2,
-          email = $3,
-          password = $4,
+          fullname = $2,
+          username = $3,
+          email = $4,
+          password = $5,
           updated_at = timezone('utc', now())
         WHERE
           id = $1
@@ -166,6 +168,7 @@ async function update(username, userInputValues) {
       `,
       values: [
         userWithNewValues.id,
+        userWithNewValues.fullname,
         userWithNewValues.username,
         userWithNewValues.email,
         userWithNewValues.password,
