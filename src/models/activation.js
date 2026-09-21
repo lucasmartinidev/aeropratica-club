@@ -116,7 +116,7 @@ async function sendEmailToUser(user, activationToken) {
 ${webserver.origin}/cadastro/ativar/${activationToken.id}
 
 Lembre-se: este link expira em 15 minutos.
-E o seu usuário para efetuar login 3é: ${user.username}
+E o seu usuário para efetuar login é: ${user.username}
 
 Atenciosamente,
 Equipe Aeroprática Club`,
