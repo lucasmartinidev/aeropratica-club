@@ -20,6 +20,7 @@ export default function RegisterPage() {
 }
 
 function RegisterForm() {
+  const [fullname, setFullname] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,7 +28,7 @@ function RegisterForm() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const requestBody = { username, email, password };
+    const requestBody = { fullname, username, email, password };
 
     const response = await fetch("/api/v1/users", {
       method: "POST",
@@ -45,6 +46,18 @@ function RegisterForm() {
   return (
     <form onSubmit={handleSubmit}>
       <Stack gap="normal">
+        <FormControl>
+          <FormControl.Label>Nome completo</FormControl.Label>
+          <TextInput
+            type="text"
+            value={fullname}
+            onChange={(event) => {
+              setFullname(event.target.value);
+            }}
+            block
+          />
+        </FormControl>
+
         <FormControl>
           <FormControl.Label>Nome de usuário</FormControl.Label>
           <TextInput
