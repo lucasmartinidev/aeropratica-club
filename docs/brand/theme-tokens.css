@@ -1,0 +1,25 @@
+:root {
+  --apc-bg: #F7FBFF;
+  --apc-surface: #FFFFFF;
+  --apc-text: #071A33;
+  --apc-text-muted: #0B2A4D;
+  --apc-primary: #1D6FAE;
+  --apc-accent: #D95720;
+  --apc-focus: #0B6FAE;
+}
+
+[data-theme="dark"] {
+  --apc-bg: #071A33;
+  --apc-surface: #0B2A4D;
+  --apc-text: #F7FBFF;
+  --apc-text-muted: #B9E3F8;
+  --apc-primary: #75C7F1;
+  --apc-accent: #FFB54F;
+  --apc-focus: #75C7F1;
+}
+
+/*
+  Use --apc-accent for text only on dark backgrounds.
+  On light backgrounds, use the darker --apc-accent value above.
+  The original orange remains available for large decorative elements.
+*/

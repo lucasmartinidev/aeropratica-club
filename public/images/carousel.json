@@ -1,0 +1,76 @@
+{
+  "format": "1920x1080 JPG + 720p",
+  "usage": "hero carousel site + saas — texto já aplicado, sem sobreposição de CTA no centro",
+  "palette": [
+    "#071A33",
+    "#0B2A4D",
+    "#2D86C9",
+    "#6FC1ED",
+    "#FFB35C",
+    "#E9673F",
+    "#F7FBFF"
+  ],
+  "source": "brand/png/aeropratica-club-moodboard.png",
+  "slides": [
+    {
+      "file": "carousel-01-conectando-voce-a-pratica-de-voo.jpg",
+      "tagline": "Conectando você à prática de voo.",
+      "slide": 1
+    },
+    {
+      "file": "carousel-02-aprenda-pratique-voe.jpg",
+      "tagline": "Aprenda. Pratique. Voe.",
+      "slide": 2
+    },
+    {
+      "file": "carousel-03-onde-a-pratica-encontra-o-voo.jpg",
+      "tagline": "Onde a prática encontra o voo.",
+      "slide": 3
+    },
+    {
+      "file": "carousel-04-seu-voo-comeca-na-pratica.jpg",
+      "tagline": "Seu voo começa na prática.",
+      "slide": 4
+    },
+    {
+      "file": "carousel-05-encontre-pratique-evolua.jpg",
+      "tagline": "Encontre. Pratique. Evolua.",
+      "slide": 5
+    },
+    {
+      "file": "carousel-06-a-comunidade-da-pratica-de-voo.jpg",
+      "tagline": "A comunidade da prática de voo.",
+      "slide": 6
+    },
+    {
+      "file": "carousel-07-do-primeiro-comando-ao-proximo-voo.jpg",
+      "tagline": "Do primeiro comando ao próximo voo.",
+      "slide": 7
+    },
+    {
+      "file": "carousel-08-aprenda-voando.jpg",
+      "tagline": "Aprenda voando.",
+      "slide": 8
+    },
+    {
+      "file": "carousel-09-sua-pratica-de-voo-comeca-aqui.jpg",
+      "tagline": "Sua prática de voo começa aqui.",
+      "slide": 9
+    },
+    {
+      "file": "carousel-10-conectando-alunos-instrutores-e-aeronaves.jpg",
+      "tagline": "Conectando alunos, instrutores e aeronaves.",
+      "slide": 10
+    },
+    {
+      "file": "carousel-11-encontre-sua-proxima-experiencia-de-voo.jpg",
+      "tagline": "Encontre sua próxima experiência de voo.",
+      "slide": 11
+    },
+    {
+      "file": "carousel-12-a-comunidade-da-pratica-aeronautica.jpg",
+      "tagline": "A comunidade da prática aeronáutica.",
+      "slide": 12
+    }
+  ]
+}
