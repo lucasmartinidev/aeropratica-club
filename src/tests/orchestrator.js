@@ -11,6 +11,7 @@ import webserver from "infra/webserver.js";
 const emailHttpUrl = `http://${process.env.EMAIL_HTTP_HOST}:${process.env.EMAIL_HTTP_PORT}`;
 
 async function waitForAllServices() {
+  process.stdout.write(`\n🟡 Aguardando todos os serviços ficarem disponíveis...\n\n`);
   await waitForWebServer();
   await waitForEmailServer();
 
